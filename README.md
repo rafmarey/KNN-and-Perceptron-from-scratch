@@ -1,6 +1,8 @@
 # KNN-and-Perceptron-from-scratch
 I wrote a code for both KNN and perceptron algorithm, using only pandas and numpy.
 
+(Note: it is better if you use the notebook version to observe each output better)
+
 To prepare the dataset for analysis, I first downloaded it from the Datos Abiertos - INEGI page as indicated during our class. I inspected the data and noticed it was a huge dataset. To make sure there were no empty columns I removed them for clarity. For the numeric columns that had missing values, I replaced them with the mean value of that specific column. This method minimizes the disturbance of the data's natural distribution. On the other hand, for those columns containing categorical values, I decided to replace the empty slots with the mode of that column, given that the mode represents the most frequently appearing category. This common approach ensures a representative fill for the missing values. After these initial adjustments, I double-checked for any remaining empty cells. Once I confirmed their count was down to zero, I felt more assured about the data's completeness.
 Given the dataset's structure, I decided to remove its first four columns. These primarily served as identifiers for "entities" and "municipalities", and their exclusion simplified the dataset without losing essential information. As for the categorical columns with varying descriptors like "muy bajo" and "bajo", I transformed them into numerical representations, where "muy bajo" converted to 1, "bajo" to 2, and so on. Finally, to make it easier to access during the model training phase, I shifted the "gdo_rezsoc10" label column to the dataset's end, positioning it as the target variable.
  
